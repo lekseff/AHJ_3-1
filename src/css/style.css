@@ -1,0 +1,141 @@
+* {
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	display: flex;
+	height: 100vh;
+	justify-content:center;
+	align-items:center;
+	flex-direction: column;
+  /* background-color: rgb(0, 0, 0);		 */
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-image: url(../img/goblin.png);
+	/* box-shadow: inset 0px 0px 20px 3px rgb(235 0 0 / 78%); */
+}
+
+.game__information {
+	display: flex;
+	justify-content:space-around;
+	margin-bottom: 20px;
+	user-select: none;
+}
+
+.game__message {
+	font-size: 24px;
+	width: fit-content;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: rgb(0, 0, 0, 0.75);
+	padding: 10px 25px;
+	border-radius: 5px;
+}
+
+.game__board {
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	flex-wrap: wrap;
+	width:430px;
+	border: 1px solid #FFFFFF;
+	background-color: rgb(0, 0, 0, 0.75);
+	border-radius: 12px;
+	padding: 25px;
+	box-shadow: 0px 0px 20px 1px rgb(255 219 0);
+}
+
+.game__board-cell {
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 84px;
+	height: 84px;
+	background-color: rgb(199, 198, 198);
+	border-radius: 50%;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.game__board-img:hover {
+	cursor: url(../../pic/hammer48.png), pointer;
+}
+
+.game__board-img {
+	width: 85%;
+	user-select: none;
+}
+
+.popup {
+  position: absolute;
+	width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.popup::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.popup__window {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 320px;
+  height: 150px;
+  text-align: center;
+  border-radius: 14px;
+  padding: 0 18px;
+  /* border: 1px solid black; */
+  background-color: white;
+	z-index: 2;
+	user-select: none;
+  box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);
+}
+
+.popup__title {
+  font-size: 20px;
+	text-transform: uppercase;
+}
+
+.popup__button {
+  border: none;
+  text-transform: uppercase;
+	width: 84px;
+	height: 84px;
+  border-radius: 50%;
+  background-color:dodgerblue;
+  cursor: pointer;
+	transition: background-color 0.3s ease;
+	box-shadow: 0px 0px 6px 3px rgba(34, 60, 80, 0.2);
+}
+
+.popup__score {
+	font-size: 16px;
+	text-transform:uppercase;
+}
+
+.popup__button:hover {
+  background-color:rgb(196, 50, 40);
+	transition: background-color 0.3s ease;
+	cursor: url(../../pic/hammer48.png), pointer;
+}
+
+.popup__hidden {
+	display: none;
+}
