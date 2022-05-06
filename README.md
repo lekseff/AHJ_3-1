@@ -1,3 +1,7 @@
+![example workflow](https://github.com/lekseff/AHJ_3-1/actions/workflows/ci_test.yml/badge.svg)
+
+![example workflow](https://github.com/lekseff/AHJ_3-1/actions/workflows/deploy.yml/badge.svg)
+
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ нужно использовать менеджер пакетов yarn (а значит, никакого `package-lock.json` в репозитории быть не должно)
